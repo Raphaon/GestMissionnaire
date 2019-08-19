@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5403B7A7-4190-4A5D-9480-2B0F14919EAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSupervisorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSupervisorForm.Designer.cs">
+      <DependentUpon>AddSupervisorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addTrainning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addTrainning.Designer.cs">
+      <DependentUpon>addTrainning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="appFunctions.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="areaAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="areaAdd.Designer.cs">
+      <DependentUpon>areaAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AreaBase.cs" />
+    <Compile Include="areaFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="areaFormAdd.Designer.cs">
+      <DependentUpon>areaFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Church.cs" />
+    <Compile Include="ChurchTransferToDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChurchTransferToDistrict.Designer.cs">
+      <DependentUpon>ChurchTransferToDistrict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="District.cs" />
+    <Compile Include="districtBase.cs" />
+    <Compile Include="districtsAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="districtsAddForm.Designer.cs">
+      <DependentUpon>districtsAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="districtTransferToAreaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="districtTransferToAreaForm.Designer.cs">
+      <DependentUpon>districtTransferToAreaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FamillyMember.cs" />
+    <Compile Include="fgm_add_church.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fgm_add_church.Designer.cs">
+      <DependentUpon>fgm_add_church.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindArea.Designer.cs">
+      <DependentUpon>FindArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindChurch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindChurch.Designer.cs">
+      <DependentUpon>FindChurch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindDistrict.Designer.cs">
+      <DependentUpon>FindDistrict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindPastor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindPastor.Designer.cs">
+      <DependentUpon>FindPastor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindTransfer.Designer.cs">
+      <DependentUpon>FindTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="leavingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="leavingForm.Designer.cs">
+      <DependentUpon>leavingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListPasteurRetraite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListPasteurRetraite.Designer.cs">
+      <DependentUpon>ListPasteurRetraite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newFamilyMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newFamilyMember.Designer.cs">
+      <DependentUpon>newFamilyMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newPastor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newPastor.Designer.cs">
+      <DependentUpon>newPastor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ordination.cs" />
+    <Compile Include="OrdinationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdinationForm.Designer.cs">
+      <DependentUpon>OrdinationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pastor.cs" />
+    <Compile Include="PastorDetailsInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PastorDetailsInfos.Designer.cs">
+      <DependentUpon>PastorDetailsInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PastorFormTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PastorFormTransfer.Designer.cs">
+      <DependentUpon>PastorFormTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pastorTransfer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supervisor.cs" />
+    <Compile Include="Trainning.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSupervisorForm.resx">
+      <DependentUpon>AddSupervisorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addTrainning.resx">
+      <DependentUpon>addTrainning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="areaAdd.resx">
+      <DependentUpon>areaAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="areaFormAdd.resx">
+      <DependentUpon>areaFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChurchTransferToDistrict.resx">
+      <DependentUpon>ChurchTransferToDistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="districtsAddForm.resx">
+      <DependentUpon>districtsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="districtTransferToAreaForm.resx">
+      <DependentUpon>districtTransferToAreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fgm_add_church.resx">
+      <DependentUpon>fgm_add_church.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindArea.resx">
+      <DependentUpon>FindArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindChurch.resx">
+      <DependentUpon>FindChurch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindDistrict.resx">
+      <DependentUpon>FindDistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPastor.resx">
+      <DependentUpon>FindPastor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindTransfer.resx">
+      <DependentUpon>FindTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="leavingForm.resx">
+      <DependentUpon>leavingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListPasteurRetraite.resx">
+      <DependentUpon>ListPasteurRetraite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newFamilyMember.resx">
+      <DependentUpon>newFamilyMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newPastor.resx">
+      <DependentUpon>newPastor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdinationForm.resx">
+      <DependentUpon>OrdinationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PastorFormTransfer.resx">
+      <DependentUpon>PastorFormTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CRDESIGNERLib">
+      <Guid>{C0AA5023-C763-4A4B-AFED-ADCF78D6C08B}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalActiveXReportViewerLib13">
+      <Guid>{B816E96D-D151-4000-BADB-53A2D8F3FC65}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalPrintControlLib">
+      <Guid>{62862E3F-F35B-455E-9459-49EAADE80A25}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportViewerExportLib">
+      <Guid>{5C21A516-C6AC-42F2-A7B7-846FFE1B122A}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportViewerWebReportSourceLib">
+      <Guid>{14173BA7-071D-4216-8C9B-EAB29A55E2D4}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
